@@ -98,6 +98,7 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  position: relative;
 }
 .nav-icon {
   display: flex;
@@ -110,6 +111,19 @@ img {
 .current {
   color: var(--blue);
 }
+.current::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0px;
+  bottom: 0px;
+  background: var(--blue);
+  border-radius: 2px;
+  opacity: 1;
+}
+
 .nav-list:hover,
 .nav-list:focus {
   color: var(--blue);
