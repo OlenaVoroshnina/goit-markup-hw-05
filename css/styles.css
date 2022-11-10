@@ -228,6 +228,27 @@ img {
   flex-basis: calc((100%- 3 * 30px) / 4);
   max-width: 270px;
 }
+.project {
+  position: relative;
+}
+.project-block {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-title {
+  display: inline-flex;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+}
 .team {
   background: var(--bg-white);
 }
@@ -447,4 +468,28 @@ img {
 .join-icon {
   color: var(--white);
   background: rgba(255, 255, 255, 0.1);
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+.modal {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
