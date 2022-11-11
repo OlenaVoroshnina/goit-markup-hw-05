@@ -348,8 +348,7 @@ img {
   gap: 30px;
 }
 .flex-element {
-  max-width: 370px;
-  flex-basis: calc((100%-2 * 30) / 3);
+  flex-basis: calc((100% - 2 * 30px) / 3);
 }
 .work-list {
   text-decoration: none;
