@@ -125,7 +125,7 @@ img {
   width: 100%;
   height: 4px;
   left: 0px;
-  bottom: 0px;
+  bottom: 1px;
   background: var(--blue);
   border-radius: 2px;
   opacity: 1;
@@ -313,7 +313,7 @@ img {
   justify-content: center;
 
   transition: background-color 250ms var(--timing-function),
-    color 250ms var(--timing-function) 250ms;
+    color 250ms var(--timing-function);
 }
 .team-icon:hover,
 .team-icon:focus {
@@ -339,8 +339,8 @@ img {
   border-radius: 4px;
   box-shadow: none;
 
-  transition: color 250ms var(--timing-function) 250ms,
-    background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function) 300ms;
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 .filter:hover,
 .filter:focus {
@@ -384,7 +384,7 @@ img {
   text-decoration: none;
   display: block;
 
-  transition: box-shadow 250ms var(--timing-function) 150ms;
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .work-list:hover,
@@ -398,29 +398,23 @@ img {
 }
 .work-image-text {
   position: absolute;
+  top: 0;
   height: 100%;
   padding: 63px 24px;
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
-  opacity: 1;
   transform: translateY(100%); 
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
-.work-list:hover .work-image-text {
-  animation: bottom-to-top 250ms var(--timing-function) 0s 1 normal both;
+.work-list:hover .work-image-text,
+.work-list:focus .work-image-text {
+  transform: translateY(0%);
 }
 
-@keyframes bottom-to-top {
-  0% {
-    transform: translateY(0%);
-    opacity: 0.2;
-  }
-  100% {
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-}
 
 .clients-title {
   font-size: 36px;
@@ -565,6 +559,7 @@ img {
   align-items: center;
   justify-content: center;
   border: 1px solid #0000001a;
+  background-color: transparent;
   cursor: pointer;
 }
 .modal-icon {
